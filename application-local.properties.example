@@ -1,0 +1,24 @@
+# Copy this file to application-local.properties in the same folder
+# (next to pom.xml). That file is gitignored.
+#
+# Persistence is JPA / Hibernate. Entities stay the same for any database.
+# This project ships the SQLite JDBC driver only. To use another engine
+# later, add that one driver to pom.xml and change the URL below.
+
+spring.datasource.url=jdbc:sqlite:./data/hostel.db
+spring.datasource.driver-class-name=org.sqlite.JDBC
+spring.datasource.username=
+spring.datasource.password=
+
+server.port=8080
+
+app.jwt.secret=replace-with-a-long-random-secret-at-least-32-chars
+app.jwt.expiration-ms=86400000
+app.cors.allowed-origins=http://localhost:4200
+
+app.seed.admin-username=admin
+app.seed.admin-password=change-me
+app.seed.admin-display-name=Hostel Admin
+app.seed.viewer-username=viewer
+app.seed.viewer-password=change-me
+app.seed.viewer-display-name=Hostel Viewer
